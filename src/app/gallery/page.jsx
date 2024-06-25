@@ -1,3 +1,4 @@
+import AboutContent from '@/components/AboutContent/AboutContent';
 import Image from 'next/image'
 import React from 'react'
 
@@ -13,6 +14,9 @@ export default function galleryPage() {
   return (
     <div className='p-12'>
       <h1 className="text-3xl font-semibold text-center">Gallery Page</h1>
+      <div>
+        <AboutContent />
+      </div>
       <div>
         {
           images.map((img, i) => (
