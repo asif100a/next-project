@@ -2,8 +2,8 @@ import Link from 'next/link';
 import React from 'react';
 
 const getTime = async() => {
-    // const res = await fetch('http://localhost:3000/time', {cache: 'no-store'});
-    const res = await fetch(`${process.env.NEXT_PUBLIC_TIME_URL}/time`, {next: {revalidate: 5}, cache: 'no-store'});
+    const res = await fetch(`${process.env.NEXT_PUBLIC_TIME_URL}/time`, {cache: 'no-store'});
+    // const res = await fetch(`${process.env.NEXT_PUBLIC_TIME_URL}/time`, {next: {revalidate: 5}, cache: 'no-store'});
     const data = await res.json();
     return data?.currentTime;
 };
